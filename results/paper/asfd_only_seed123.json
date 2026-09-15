@@ -1,0 +1,40 @@
+{
+  "seed": 123,
+  "checkpoint": "./outputs/reviewer_evidence_h1536_seed123/asfd_only_refine/epoch_01.pth",
+  "definition": "one-epoch h1536 ASFD-only continuation with lambda_VADD=0",
+  "rows": [
+    {
+      "protocol": "CITYSCAPES",
+      "miou": 44.1978
+    },
+    {
+      "protocol": "ADE20K",
+      "miou": 25.765
+    },
+    {
+      "protocol": "VOC20",
+      "miou": 91.2389
+    },
+    {
+      "protocol": "CONTEXT59",
+      "miou": 44.365
+    },
+    {
+      "protocol": "COCO_STUFF",
+      "miou": 31.7754
+    },
+    {
+      "protocol": "PASCAL_VOC",
+      "miou": 69.1714
+    },
+    {
+      "protocol": "PASCAL_CONTEXT",
+      "miou": 40.712
+    },
+    {
+      "protocol": "COCO_OBJECT",
+      "miou": 47.6863
+    }
+  ],
+  "macro_average": 49.363975
+}

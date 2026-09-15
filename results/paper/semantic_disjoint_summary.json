@@ -1,0 +1,134 @@
+{
+  "protocol": {
+    "protocol_name": "ADE20K-12 manually audited concept-disjoint subset",
+    "version": "v1",
+    "source_vocabulary": "COCO-Stuff 171",
+    "target_vocabulary": "ADE20K 150 foreground classes",
+    "prediction_space": "All 150 ADE20K classes remain in the argmax competition; the subset is applied only when averaging per-class IoU.",
+    "indexing": "ade_reduced_id is zero-based after ADE20K reduce-zero-label; ade_raw_label is the original one-based foreground label.",
+    "audit_rule": "Retain a target concept only when no named concrete COCO-Stuff category is an exact match, synonym, spelling variant, or direct semantic parent/child. Residual ontology buckets such as *-other, solid-other, and structural-other are not treated as named concepts. Ambiguous candidates are excluded.",
+    "selected_classes": [
+      {
+        "ade_reduced_id": 78,
+        "ade_raw_label": 79,
+        "name": "arcademachine"
+      },
+      {
+        "ade_reduced_id": 105,
+        "ade_raw_label": 106,
+        "name": "conveyerbelt"
+      },
+      {
+        "ade_reduced_id": 107,
+        "ade_raw_label": 108,
+        "name": "washer"
+      },
+      {
+        "ade_reduced_id": 111,
+        "ade_raw_label": 112,
+        "name": "barrel"
+      },
+      {
+        "ade_reduced_id": 112,
+        "ade_raw_label": 113,
+        "name": "basket"
+      },
+      {
+        "ade_reduced_id": 129,
+        "ade_raw_label": 130,
+        "name": "dishwasher"
+      },
+      {
+        "ade_reduced_id": 132,
+        "ade_raw_label": 133,
+        "name": "sculpture"
+      },
+      {
+        "ade_reduced_id": 138,
+        "ade_raw_label": 139,
+        "name": "ashcan"
+      },
+      {
+        "ade_reduced_id": 139,
+        "ade_raw_label": 140,
+        "name": "fan"
+      },
+      {
+        "ade_reduced_id": 142,
+        "ade_raw_label": 143,
+        "name": "plate"
+      },
+      {
+        "ade_reduced_id": 145,
+        "ade_raw_label": 146,
+        "name": "shower"
+      },
+      {
+        "ade_reduced_id": 146,
+        "ade_raw_label": 147,
+        "name": "radiator"
+      }
+    ],
+    "excluded_ambiguous_examples": [
+      {
+        "name": "streetlight",
+        "reason": "too close to COCO-Stuff trafficlight/light"
+      },
+      {
+        "name": "minibike",
+        "reason": "direct child of motorcycle"
+      },
+      {
+        "name": "stool",
+        "reason": "direct child of chair/seat"
+      },
+      {
+        "name": "cradle",
+        "reason": "bed-like furniture"
+      },
+      {
+        "name": "escalator",
+        "reason": "semantically close to stairs"
+      },
+      {
+        "name": "ship",
+        "reason": "directly overlaps boat"
+      },
+      {
+        "name": "waterfall",
+        "reason": "overlaps water categories"
+      }
+    ]
+  },
+  "results": [
+    {
+      "key": "teacher",
+      "method": "10-step teacher",
+      "full_ade20k_miou": 0.2540850043296814,
+      "concept_disjoint_miou": 0.24772846746041458,
+      "selected_class_count": 12,
+      "valid_class_count": 12
+    },
+    {
+      "key": "asfd_only",
+      "method": "ASFD-only",
+      "full_ade20k_miou": 0.25765010714530945,
+      "concept_disjoint_miou": 0.24122271387820474,
+      "selected_class_count": 12,
+      "valid_class_count": 12
+    },
+    {
+      "key": "asfd_vadd",
+      "method": "ASFD+VADD",
+      "full_ade20k_miou": 0.2590267062187195,
+      "concept_disjoint_miou": 0.250934116267782,
+      "selected_class_count": 12,
+      "valid_class_count": 12
+    }
+  ],
+  "deltas_percentage_points": {
+    "vadd_minus_asfd_only_full": 0.13765990734100342,
+    "vadd_minus_asfd_only_subset": 0.9711402389577267,
+    "vadd_minus_teacher_subset": 0.32056488073674283
+  }
+}

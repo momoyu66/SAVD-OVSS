@@ -1,0 +1,302 @@
+{
+  "scope": "Feature-level transfer probe on held-out COCO visual anchors. Exact-name-disjoint means normalized strings do not occur in the 171-name VADD taxonomy; it is not a claim of semantic non-overlap or end-to-end unseen-class segmentation.",
+  "split_sha256": "ec7af172affd389f5931c2ab421dec2ecd247b9778befddbdbd0d434cc0cc887",
+  "taxonomy_transfer": {
+    "cityscapes": {
+      "definition": "normalized class name absent from the 171-name VADD taxonomy",
+      "all_class_count": 19,
+      "disjoint_class_count": 10,
+      "disjoint_class_names": [
+        "sidewalk",
+        "building",
+        "wall",
+        "pole",
+        "traffic light",
+        "traffic sign",
+        "vegetation",
+        "terrain",
+        "sky",
+        "rider"
+      ],
+      "students": {
+        "asfd_only": {
+          "class_count": 10,
+          "endpoint_cosine_mean": 0.9885222315788269,
+          "endpoint_cosine_min": 0.9663128852844238,
+          "decision_kl_t2": 0.0038879436906427145,
+          "top1_agreement": 0.9285937547683716,
+          "decision_flip_rate": 0.07140624523162842
+        },
+        "asfd_vadd": {
+          "class_count": 10,
+          "endpoint_cosine_mean": 0.988658607006073,
+          "endpoint_cosine_min": 0.9663743376731873,
+          "decision_kl_t2": 0.003046708647161722,
+          "top1_agreement": 0.9361718893051147,
+          "decision_flip_rate": 0.06382811069488525
+        }
+      }
+    },
+    "context59": {
+      "definition": "normalized class name absent from the 171-name VADD taxonomy",
+      "all_class_count": 59,
+      "disjoint_class_count": 22,
+      "disjoint_class_names": [
+        "aeroplane",
+        "bag",
+        "bedclothes",
+        "building",
+        "ceiling",
+        "computer",
+        "door",
+        "floor",
+        "food",
+        "ground",
+        "motorbike",
+        "plate",
+        "shelves",
+        "sidewalk",
+        "sign",
+        "sky",
+        "sofa",
+        "track",
+        "tvmonitor",
+        "wall",
+        "water",
+        "window"
+      ],
+      "students": {
+        "asfd_only": {
+          "class_count": 22,
+          "endpoint_cosine_mean": 0.9936280846595764,
+          "endpoint_cosine_min": 0.988152801990509,
+          "decision_kl_t2": 0.005308939144015312,
+          "top1_agreement": 0.9039062261581421,
+          "decision_flip_rate": 0.09609377384185791
+        },
+        "asfd_vadd": {
+          "class_count": 22,
+          "endpoint_cosine_mean": 0.9939719438552856,
+          "endpoint_cosine_min": 0.9886565208435059,
+          "decision_kl_t2": 0.003433142090216279,
+          "top1_agreement": 0.922656238079071,
+          "decision_flip_rate": 0.07734376192092896
+        }
+      }
+    },
+    "ade20k": {
+      "definition": "normalized class name absent from the 171-name VADD taxonomy",
+      "all_class_count": 150,
+      "disjoint_class_count": 103,
+      "disjoint_class_names": [
+        "wall",
+        "building,",
+        "sky",
+        "floor,",
+        "ceiling",
+        "windowpane,",
+        "sidewalk,",
+        "earth,",
+        "door,",
+        "plant,",
+        "water",
+        "painting,",
+        "sofa,",
+        "mirror",
+        "field",
+        "armchair",
+        "seat",
+        "desk",
+        "wardrobe,",
+        "lamp",
+        "bathtub,",
+        "cushion",
+        "base,",
+        "box",
+        "column,",
+        "signboard,",
+        "chest",
+        "fireplace,",
+        "grandstand,",
+        "path",
+        "runway",
+        "case,",
+        "pool",
+        "screen",
+        "stairway,",
+        "bookcase",
+        "blind,",
+        "coffee",
+        "countertop",
+        "stove,",
+        "palm,",
+        "kitchen",
+        "computer,",
+        "swivel",
+        "bar",
+        "arcade",
+        "hovel,",
+        "tower",
+        "chandelier,",
+        "awning,",
+        "streetlight,",
+        "booth,",
+        "television",
+        "apparel,",
+        "pole",
+        "land,",
+        "bannister,",
+        "escalator,",
+        "ottoman,",
+        "buffet,",
+        "poster,",
+        "stage",
+        "van",
+        "ship",
+        "fountain",
+        "conveyer",
+        "canopy",
+        "washer,",
+        "plaything,",
+        "swimming",
+        "stool",
+        "barrel,",
+        "basket,",
+        "waterfall,",
+        "bag",
+        "minibike,",
+        "cradle",
+        "ball",
+        "food,",
+        "step,",
+        "tank,",
+        "trade",
+        "pot,",
+        "animal,",
+        "lake",
+        "dishwasher,",
+        "screen,",
+        "sculpture",
+        "hood,",
+        "sconce",
+        "traffic",
+        "tray",
+        "ashcan,",
+        "fan",
+        "pier,",
+        "crt",
+        "plate",
+        "monitor,",
+        "bulletin",
+        "shower",
+        "radiator",
+        "glass,",
+        "flag"
+      ],
+      "students": {
+        "asfd_only": {
+          "class_count": 103,
+          "endpoint_cosine_mean": 0.9920808672904968,
+          "endpoint_cosine_min": 0.9566811919212341,
+          "decision_kl_t2": 0.005513120908290148,
+          "top1_agreement": 0.8896093964576721,
+          "decision_flip_rate": 0.11039060354232788
+        },
+        "asfd_vadd": {
+          "class_count": 103,
+          "endpoint_cosine_mean": 0.9920617938041687,
+          "endpoint_cosine_min": 0.9571889638900757,
+          "decision_kl_t2": 0.005589570850133896,
+          "top1_agreement": 0.8878124952316284,
+          "decision_flip_rate": 0.11218750476837158
+        }
+      }
+    }
+  },
+  "prompt_variation": {
+    "photo": {
+      "template": "a photo of a {name}.",
+      "students": {
+        "asfd_only": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9928818941116333,
+          "endpoint_cosine_min": 0.9690301418304443,
+          "decision_kl_t2": 0.0059262788854539394,
+          "top1_agreement": 0.9078906178474426,
+          "decision_flip_rate": 0.09210938215255737
+        },
+        "asfd_vadd": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9931514859199524,
+          "endpoint_cosine_min": 0.9695776700973511,
+          "decision_kl_t2": 0.004980329889804125,
+          "top1_agreement": 0.9064843654632568,
+          "decision_flip_rate": 0.09351563453674316
+        }
+      }
+    },
+    "scene": {
+      "template": "a scene containing {name}.",
+      "students": {
+        "asfd_only": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.990134060382843,
+          "endpoint_cosine_min": 0.9751102924346924,
+          "decision_kl_t2": 0.006039528176188469,
+          "top1_agreement": 0.9021093845367432,
+          "decision_flip_rate": 0.09789061546325684
+        },
+        "asfd_vadd": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9901840686798096,
+          "endpoint_cosine_min": 0.9757635593414307,
+          "decision_kl_t2": 0.006197795271873474,
+          "top1_agreement": 0.9068750143051147,
+          "decision_flip_rate": 0.09312498569488525
+        }
+      }
+    },
+    "closeup": {
+      "template": "a close-up photo of the {name}.",
+      "students": {
+        "asfd_only": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9933338165283203,
+          "endpoint_cosine_min": 0.9872556924819946,
+          "decision_kl_t2": 0.0053465659730136395,
+          "top1_agreement": 0.8766406178474426,
+          "decision_flip_rate": 0.12335938215255737
+        },
+        "asfd_vadd": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9934236407279968,
+          "endpoint_cosine_min": 0.9874145984649658,
+          "decision_kl_t2": 0.00545990327373147,
+          "top1_agreement": 0.8762500286102295,
+          "decision_flip_rate": 0.12374997138977051
+        }
+      }
+    },
+    "pixel": {
+      "template": "the pixels belonging to {name}.",
+      "students": {
+        "asfd_only": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9909002184867859,
+          "endpoint_cosine_min": 0.978185772895813,
+          "decision_kl_t2": 0.005054131615906954,
+          "top1_agreement": 0.8358593583106995,
+          "decision_flip_rate": 0.16414064168930054
+        },
+        "asfd_vadd": {
+          "class_count": 171,
+          "endpoint_cosine_mean": 0.9908414483070374,
+          "endpoint_cosine_min": 0.9777330756187439,
+          "decision_kl_t2": 0.005142460577189922,
+          "top1_agreement": 0.8383593559265137,
+          "decision_flip_rate": 0.16164064407348633
+        }
+      }
+    }
+  }
+}

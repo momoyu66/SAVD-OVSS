@@ -1,0 +1,64 @@
+{
+  "backbone": {
+    "model_id": "checkpoints/facebook_dinov3_vitl16_pretrain_lvd1689m_hf",
+    "image_size": 448
+  },
+  "text_encoder": {
+    "type": "clip",
+    "model_name": "ViT-L-14",
+    "pretrained": "checkpoints/open_clip_pytorch_model.bin"
+  },
+  "head": {
+    "in_channels": 1024,
+    "tau": 0.07,
+    "use_flow_alignment": false,
+    "use_text_flow": true,
+    "use_cls_flow": true,
+    "use_cls_mlp": false,
+    "topk": 20
+  },
+  "flow": {
+    "steps": 10,
+    "dt": 0.1,
+    "depth": 4,
+    "lambda_vel": 0.0,
+    "lambda_vel_div": 0.0,
+    "lambda_vel_smooth": 0.0,
+    "infer_steps": []
+  },
+  "training": {
+    "batch_size": 256,
+    "num_epochs": 20,
+    "resume_from_checkpoint": "",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "w_nce": 1.0,
+    "w_rf": 0,
+    "w_text_consistency": 0.0,
+    "grid_size": 28,
+    "save_interval": 1,
+    "eval_interval": 1,
+    "grad_clip": 10.0,
+    "threshold": 0.35
+  },
+  "data": {
+    "image_size": 448,
+    "validation_image_size": 448,
+    "num_workers": 4
+  },
+  "validation": {
+    "batch_size": 16,
+    "slide_window": {
+      "enabled": true,
+      "crop_size": 448,
+      "stride": 224,
+      "max_long_side": 2048
+    },
+    "use_pamr": false
+  },
+  "logging": {
+    "log_interval": 30,
+    "tensorboard": true
+  },
+  "device": "cuda"
+}

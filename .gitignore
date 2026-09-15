@@ -1,0 +1,59 @@
+# Byte-compiled / build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Model weights - distributed separately, see checkpoints/README.md
+*.pth
+*.pt
+*.pth.tar
+*.ckpt
+*.bin
+*.safetensors
+
+# Run artifacts
+outputs/
+outputs_*/
+*.log
+logs/
+tensorboard_logs/
+results_archive/
+results_work/
+
+# Datasets - see data/README.md; create these as symlinks to your own storage
+data/*
+!data/README.md
+
+# External checkpoints - keep only their manifest
+checkpoints/*
+!checkpoints/README.md
+
+# Environment
+.env
+*.pem
+*.key
+.venv
+env/
+venv/
+ENV/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

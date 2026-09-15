@@ -1,0 +1,59 @@
+{
+  "seed": 123,
+  "rows": [
+    {
+      "protocol": "CITYSCAPES",
+      "control": 43.1088,
+      "vadd": 45.0689,
+      "vadd_minus_control": 1.960099999999997
+    },
+    {
+      "protocol": "ADE20K",
+      "control": 25.7578,
+      "vadd": 25.9027,
+      "vadd_minus_control": 0.1448999999999998
+    },
+    {
+      "protocol": "VOC20",
+      "control": 91.3667,
+      "vadd": 90.9607,
+      "vadd_minus_control": -0.4059999999999917
+    },
+    {
+      "protocol": "CONTEXT59",
+      "control": 44.0237,
+      "vadd": 44.7144,
+      "vadd_minus_control": 0.6906999999999996
+    },
+    {
+      "protocol": "COCO_STUFF",
+      "control": 31.5506,
+      "vadd": 31.8074,
+      "vadd_minus_control": 0.2568000000000019
+    },
+    {
+      "protocol": "PASCAL_VOC",
+      "control": 69.0441,
+      "vadd": 69.173,
+      "vadd_minus_control": 0.12890000000000157
+    },
+    {
+      "protocol": "PASCAL_CONTEXT",
+      "control": 40.5507,
+      "vadd": 40.8663,
+      "vadd_minus_control": 0.31560000000000343
+    },
+    {
+      "protocol": "COCO_OBJECT",
+      "control": 47.4819,
+      "vadd": 47.9628,
+      "vadd_minus_control": 0.48089999999999833
+    }
+  ],
+  "means": {
+    "control": 49.1105375,
+    "vadd": 49.55702500000001,
+    "vadd_minus_control": 0.4464875000000106
+  },
+  "wins": 7
+}

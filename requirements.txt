@@ -1,0 +1,26 @@
+# Python dependencies for DINOde.
+#
+# Install PyTorch first, matched to your CUDA version (https://pytorch.org/get-started/locally/).
+# The reported results were produced with torch 2.6.0+cu118 on Python 3.10:
+#
+#   conda create -n ovss python=3.10
+#   conda activate ovss
+#   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu118
+#   pip install -r requirements.txt
+
+# Frozen backbones: DINOv3 via transformers, CLIP text tower via open_clip
+transformers==4.56.2
+open_clip_torch==2.20.0
+huggingface_hub==0.35.3
+
+# Scientific computing and image I/O
+numpy==1.26.0
+scipy==1.11.2
+Pillow==10.0.1
+
+# Visualization of qualitative segmentation maps
+matplotlib==3.8.0
+
+# Training utilities
+tqdm==4.66.1
+tensorboard==2.20.0
