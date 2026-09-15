@@ -31,12 +31,12 @@ The paper reports one fixed run with hidden dimension 1536:
 | Independent-anchor decision KL, ASFD-only / SAVD | 0.00496 / 0.00174 |
 | Independent-anchor low-margin top-1, ASFD-only / SAVD | 71.06 / 80.56 |
 | Cached-embedding alignment speedup | 50.25x |
-| Raw-name vocabulary-refresh speedup | 1.001--1.041x |
 | Full Cityscapes latency, SAVD / teacher | 407.12 / 411.53 ms/image |
 
 The `results/paper/` directory contains the machine-readable records used for
-these claims. The raw-name and full-pipeline measurements show that the main
-deployment benefit occurs when aligned prototypes must be regenerated often.
+these claims. The full-pipeline audit defines the scope of the reported
+speedup: it applies to class-bank alignment, while the remaining text and
+visual encoders retain their original costs.
 
 ## Repository layout
 
